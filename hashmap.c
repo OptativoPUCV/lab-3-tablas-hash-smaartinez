@@ -110,10 +110,10 @@ void eraseMap(HashMap * map,  char * key)
                 map->size--;
                 return;            
             }
+            indicePosicion = (indicePosicion + 1) % map->capacity; 
+            auxiliar = map->buckets[indicePosicion];
         }
     }
-
-
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
